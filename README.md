@@ -35,15 +35,11 @@ http://localhost:5173
 
 ## APIs Used in This Project
 
-1. **Numbers API**  
-This gives a random trivia fact, usually about numbers or history.  
-Link: https://numbersapi.com/
-
-2. **JokeAPI**  
+1. **JokeAPI**  
 This gives a random joke in plain text. The app uses the safe-mode version.  
 Link: https://jokeapi.dev/
 
-3. **NHTSA Vehicle API**  
+2. **NHTSA Vehicle API**  
 This is used to load a full list of car makes (brands) for the dropdown.  
 Link: https://vpic.nhtsa.dot.gov/api/
 
@@ -74,6 +70,10 @@ If the JokeAPI fails or returns nothing, the app uses a backup list of jokes.
 ----------
 
 ## Screenshot
+
+Here’s what the app looks like when it runs:
+
+![screenshot](screenshot.png)
 
 
 ----------
