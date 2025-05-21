@@ -95,5 +95,5 @@ index.html - main HTML layout with modal structure
 
 ## Author
 
-This project was created by Rakeen Alam for the TKH IF Phase 1 Final Project.
+This project was created by Rakeen Alam for the The Knowledge House. IT IS STILL IN BETA AND THERE ARE CHANGES TO COME SOON.
 
