@@ -1,0 +1,199 @@
+:root {
+  --primary: #39A0ED;
+  --secondary: #4C6085;
+  --tertiary: #13C4A3;
+  --text-light: #fff;
+  --text-dark: #222;
+  --highlight: #FFD166; /* warm yellow hover */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--primary);
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.app {
+  background-color: #fff;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+h1 {
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+}
+
+select {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+}
+
+
+select:hover {
+  border-color: var(--highlight);
+  background-color: #fdfcdc;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--secondary);
+  color: var(--text-light);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--tertiary);
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: var(--highlight);
+  transform: scale(0.98);
+}
+
+#factContainer {
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.fact-card {
+  background-color: var(--tertiary);
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+  animation: fadeInUp 0.5s ease-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  text-align: left;
+  position: relative;
+}
+
+.fact-card::before {
+  content: "💬";
+  font-size: 1.5rem;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+select, button {
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem auto;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content {
+  background-color: #fff;
+  color: var(--text-dark);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.25rem;
+  position: relative;
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.vote-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.vote-btn {
+  background-color: var(--secondary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.vote-btn:hover {
+  background-color: var(--tertiary);
+  transform: scale(1.05);
+}
+
+.vote-response {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--highlight);
+  text-align: center;
+}

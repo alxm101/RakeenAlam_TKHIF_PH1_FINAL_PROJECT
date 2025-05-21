@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Which Automotive Brand is the Funniest?</title>
+  <link rel="stylesheet" href="/src/styles/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="app">
+    <h1>Which Automotive Brand is the Funniest?</h1>
+    <p style="margin-top: -0.5rem; font-size: 1rem; color: #555;">
+Pick a brand, then click to discover a random joke or trivia!
+</p>
+
+
+    <select id="makeSelect">
+      <option>Loading makes...</option>
+    </select>
+
+    <button id="factBtn">Reveal a Random Joke or Fact</button>
+
+
+    <div id="factContainer"></div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+
+
+  <!-- Modal for displaying facts -->
+<div id="modalOverlay" class="modal-overlay hidden">
+  <div class="modal-content">
+    <span id="modalClose" class="modal-close">&times;</span>
+    <div id="modalText"></div>
+
+<!-- Voting buttons -->
+<div id="voteButtons" class="vote-buttons">
+  <button id="voteFunny" class="vote-btn">😂 That was funny</button>
+  <button id="voteBad" class="vote-btn">🙄 Horrendous joke, never again</button>
+</div>
+
+<!-- Reaction/feedback message -->
+<div id="voteResponse" class="vote-response"></div>
+
+  </div>
+</div>
+
+</body>
+</html>
